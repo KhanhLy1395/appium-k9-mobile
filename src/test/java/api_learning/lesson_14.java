@@ -17,7 +17,7 @@ public class lesson_14 {
         desiredCapabilities.setCapability("automationName", "uiautomator2");
         desiredCapabilities.setCapability("udid", "9b776ad1");
         desiredCapabilities.setCapability("appPackage", "com.wdiodemoapp");
-        desiredCapabilities.setCapability("appActivities", "com.wdiodemoapp.MainActivity");
+        desiredCapabilities.setCapability("appActivity", "com.wdiodemoapp.MainActivity");
 
         //Init appium session
 
