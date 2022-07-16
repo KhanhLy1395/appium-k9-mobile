@@ -4,8 +4,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -39,7 +37,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
                 appiumDriver = new AndroidDriver<>(appiumServer, desiredCapabilities);
                 break;
             case IOS:
-                appiumDriver = new IOSDriver<MobileElement>(appiumServer, desiredCapabilities);
+                appiumDriver = new IOSDriver<>(appiumServer, desiredCapabilities);
                 break;
         }
         // Implicit wait | Interval time 500ms

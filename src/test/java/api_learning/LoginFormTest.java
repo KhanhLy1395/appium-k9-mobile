@@ -44,3 +44,4 @@ public class LoginFormTest {
         appiumDriver.quit();
     }
 }
+
