@@ -13,8 +13,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class SwipeVertically {
+public class NarrowDownSearching {
+
 
     public static void main(String[] args) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
@@ -25,7 +29,7 @@ public class SwipeVertically {
             WebDriverWait wait = new WebDriverWait(appiumDriver, 10L);
             wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"Form components\")")));
 
-           // Get mobile window size
+            // Get mobile window size
             Dimension windowSize = appiumDriver.manage().window().getSize();
             int screenHeight = windowSize.getHeight();
             int screenWidth = windowSize.getWidth();
@@ -34,8 +38,8 @@ public class SwipeVertically {
             int xStartPoint = (50 * screenHeight) / 100;
             int xEndPoint = (50 * screenHeight) / 100;
 
-            int yStartPoint = (50 * screenWidth) /100;
-            int yEndPoint = (10 * screenWidth) /100;
+            int yStartPoint = 0;
+            int yEndPoint = (50 * screenWidth) / 100;
 
             // Convert coordinates >> point options
             PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
@@ -50,23 +54,30 @@ public class SwipeVertically {
                     .release()
                     .perform();
 
-            // Swipe down screen
-           // touchAction
-                    //.longPress(endPoint)
-                   // .moveTo(startPoint)
-                   // .release()
-                    //.perform();
+            List<MobileElement> notificationElems = appiumDriver.findElements(MobileBy.id("android:id/notification_main_column"));
+            Map<String, String> notificationsContents = new HashMap<>();
+            for (MobileElement notificationElem : notificationElems) {
+                MobileElement titleElem = notificationElem.findElement(MobileBy.id("android:id/title"));
+                MobileElement contentElem = notificationElem.findElement(MobileBy.id("android:id/text"));
+                notificationsContents.put(titleElem.getText().trim(), contentElem.getText().trim());
+            }
 
+            //Verification
+            if (notificationsContents.keySet().isEmpty())
+                throw new RuntimeException("No notification");
+
+            for (String title : notificationsContents.keySet()) {
+                System.out.println("Title: " + title);
+                System.out.println("Content" + notificationsContents.get(title));
+            }
+            
             // Click to 'Activate' button
             appiumDriver.findElement(MobileBy.AccessibilityId("button-Active")).click();
-
-            //Verify popup displayed
-
 
             // debug purpose only
 
             Thread.sleep(3000);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

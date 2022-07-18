@@ -22,6 +22,8 @@ public class SwipeHorizontally {
             // navigate to login screen
             MobileElement navFormsScreenButton = appiumDriver.findElement(MobileBy.AccessibilityId("Swipe"));
             navFormsScreenButton.click();
+
+            // wait until swipe screen
             WebDriverWait wait = new WebDriverWait(appiumDriver, 10L);
             wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"Swipe horizontal\")")));
 
@@ -42,21 +44,16 @@ public class SwipeHorizontally {
             PointOption endPoint = new PointOption<>().withCoordinates(xEndPoint, yEndPoint);
 
             // Swipe up screen - USing touch action
-            TouchAction touchAction = new TouchAction<>(appiumDriver);
+            TouchAction touchAction = new TouchAction(appiumDriver);
             for (int i = 0; i < 5; i++) {
                 touchAction
-                        .press(startPoint)
+                        .longPress(startPoint)
                         .waitAction(new WaitOptions().withDuration(Duration.ofMillis(500)))
                         .moveTo(endPoint)
                         .release()
                         .perform();
             }
 
-
-
-            // Click to 'Activate' button
-
-            //Verify popup displayed
 
 
             // debug purpose only
