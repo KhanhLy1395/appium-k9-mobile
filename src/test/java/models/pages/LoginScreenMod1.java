@@ -9,10 +9,5 @@ public class LoginScreenMod1 {
 
     AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
 
-    try {
-        //navigate to Login screen
 
-    } catch(Exception e){
-        e.printStackTrace();
-    }
 }
