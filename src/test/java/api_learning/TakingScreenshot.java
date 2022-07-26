@@ -38,7 +38,7 @@ public class TakingScreenshot {
             base64ScreenshotData = loginBtnElem.getScreenshotAs(OutputType.FILE); // từ 1 element getscreenshot(chụp riêng app)
             fileLocation = System.getProperty("user.dir").concat("/sreenshots/").concat("LoginBtn.png");
             FileUtils.copyFile(base64ScreenshotData, new File(fileLocation));
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

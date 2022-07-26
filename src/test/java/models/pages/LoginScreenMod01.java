@@ -1,17 +1,10 @@
 package models.pages;
 
-<<<<<<< HEAD
-=======
-import driver.DriverFactory;
->>>>>>> a18ffde14b47ac4a94bc640580e013cafd3ae136
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
-<<<<<<< HEAD
-=======
-import org.openqa.selenium.Platform;
->>>>>>> a18ffde14b47ac4a94bc640580e013cafd3ae136
+>>>>>>>a18ffde14b47ac4a94bc640580e013cafd3ae136
 
 public class LoginScreenMod01 {
 
@@ -20,23 +13,24 @@ public class LoginScreenMod01 {
     private final static By passwordSel = MobileBy.AccessibilityId("input-password");
     private final static By loginBtnSel = MobileBy.AccessibilityId("button-LOGIN");
 
-<<<<<<< HEAD
+<<<<<<<HEAD
 
 =======
->>>>>>> a18ffde14b47ac4a94bc640580e013cafd3ae136
+        >>>>>>>a18ffde14b47ac4a94bc640580e013cafd3ae136
+
     public LoginScreenMod01(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
 
-    public MobileElement usernameElem(){
+    public MobileElement usernameElem() {
         return appiumDriver.findElement(usernameSel);
     }
 
-    public MobileElement passwordElem(){
+    public MobileElement passwordElem() {
         return appiumDriver.findElement(passwordSel);
     }
 
-    public MobileElement loginBtnElem(){
+    public MobileElement loginBtnElem() {
         return appiumDriver.findElement(loginBtnSel);
     }
 

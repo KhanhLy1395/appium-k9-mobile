@@ -9,7 +9,6 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
@@ -48,17 +47,17 @@ public class HybridContext {
             List<MenuItemData> menuItemDataList = new ArrayList<>();
 
             // False negative : luon chay ca khi menuItemElems empty
-            if(menuItemElems.isEmpty())
+            if (menuItemElems.isEmpty())
                 throw new RuntimeException("[ERR] There is no list items!");
             for (MobileElement menuItemElem : menuItemElems) {
                 String itemText = menuItemElem.getText();
                 String itemHref = menuItemElem.getAttribute("href");
-                if (itemText.isEmpty()){
+                if (itemText.isEmpty()) {
                     menuItemDataMap.put("GitHub", itemHref); // xử lý github item
-                    menuItemDataList.add(new MenuItemData("GitHub" , itemHref));
+                    menuItemDataList.add(new MenuItemData("GitHub", itemHref));
                 } else {
                     menuItemDataMap.put(itemText, itemHref); // xử lý các item còn lại
-                    menuItemDataList.add(new MenuItemData(itemText , itemHref));
+                    menuItemDataList.add(new MenuItemData(itemText, itemHref));
                 }
 
             }
@@ -80,7 +79,7 @@ public class HybridContext {
             //Switch back to Native context
             appiumDriver.context(Contexts.NATIVE);
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

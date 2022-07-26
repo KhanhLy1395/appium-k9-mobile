@@ -25,7 +25,7 @@ public class SwipeVertically {
             WebDriverWait wait = new WebDriverWait(appiumDriver, 10L);
             wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"Form components\")")));
 
-           // Get mobile window size
+            // Get mobile window size
             Dimension windowSize = appiumDriver.manage().window().getSize();
             int screenHeight = windowSize.getHeight();
             int screenWidth = windowSize.getWidth();
@@ -34,8 +34,8 @@ public class SwipeVertically {
             int xStartPoint = (50 * screenHeight) / 100;
             int xEndPoint = (50 * screenHeight) / 100;
 
-            int yStartPoint = (50 * screenWidth) /100;
-            int yEndPoint = (10 * screenWidth) /100;
+            int yStartPoint = (50 * screenWidth) / 100;
+            int yEndPoint = (10 * screenWidth) / 100;
 
             // Convert coordinates >> point options
             PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
@@ -51,11 +51,11 @@ public class SwipeVertically {
                     .perform();
 
             // Swipe down screen
-           // touchAction
-                    //.longPress(endPoint)
-                   // .moveTo(startPoint)
-                   // .release()
-                    //.perform();
+            // touchAction
+            //.longPress(endPoint)
+            // .moveTo(startPoint)
+            // .release()
+            //.perform();
 
             // Click to 'Activate' button
             appiumDriver.findElement(MobileBy.AccessibilityId("button-Active")).click();
@@ -66,7 +66,7 @@ public class SwipeVertically {
             // debug purpose only
 
             Thread.sleep(3000);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -21,17 +21,17 @@ public class lesson_14 {
 
         //Init appium session
 
-       try {
+        try {
             URL appiumServer = new URL("http://localhost:4723/wd/hub");
             appiumDriver = new AndroidDriver<MobileElement>(appiumServer, desiredCapabilities);
             // Debug purpose only
             Thread.sleep(3000);
-        } catch (Exception e){
-           e.printStackTrace();
-       }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-       if (appiumDriver != null)
-           appiumDriver.quit();
+        if (appiumDriver != null)
+            appiumDriver.quit();
 
 
     }

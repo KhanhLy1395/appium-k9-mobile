@@ -4,8 +4,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -14,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory implements MobileCapabilityTypeEx {
 
-    public static AppiumDriver<MobileElement> getDriver(Platform platform){
+    public static AppiumDriver<MobileElement> getDriver(Platform platform) {
         AppiumDriver<MobileElement> appiumDriver = null;
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -25,16 +23,16 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         desiredCapabilities.setCapability(APP_ACTIVITY, "com.wdiodemoapp.MainActivity");
         URL appiumServer = null;
 
-       try {
-           appiumServer = new URL("http://localhost:4723/wd/hub");
-        }  catch (Exception e){
-           e.printStackTrace();
-       }
+        try {
+            appiumServer = new URL("http://localhost:4723/wd/hub");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-       if (appiumServer == null)
-           throw new RuntimeException("Can't construct the appium server url @http://localhost:4723/wd/hub");
+        if (appiumServer == null)
+            throw new RuntimeException("Can't construct the appium server url @http://localhost:4723/wd/hub");
 
-        switch (platform){
+        switch (platform) {
             case ANDROID:
                 appiumDriver = new AndroidDriver<>(appiumServer, desiredCapabilities);
                 break;
@@ -43,8 +41,8 @@ public class DriverFactory implements MobileCapabilityTypeEx {
                 break;
         }
         // Implicit wait | Interval time 500ms
-            appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            return appiumDriver;
+        appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return appiumDriver;
     }
 
 }
