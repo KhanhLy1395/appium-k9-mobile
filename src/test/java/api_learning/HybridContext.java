@@ -8,8 +8,8 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
@@ -23,6 +23,7 @@ public class HybridContext {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
 
         try {
+
             By webViewNavBtnSel = MobileBy.AccessibilityId("Webview");
             MobileElement webViewNavBtnElem = appiumDriver.findElement(webViewNavBtnSel);
             webViewNavBtnElem.click();
