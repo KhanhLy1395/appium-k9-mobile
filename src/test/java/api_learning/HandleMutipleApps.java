@@ -41,7 +41,7 @@ public class HandleMutipleApps {
             appiumDriver.activateApp(AppPackages.SETTINGS);
 
             // Navigate to network list
-            By wifiLabelSel = MobileBy.xpath("//*[@text='Wi-Fi']");
+            By wifiLabelSel = MobileBy.xpath("//*[@text='WLAN']");
             appiumDriver.findElement(wifiLabelSel).click();
 
             // Toggle ON/OFF
