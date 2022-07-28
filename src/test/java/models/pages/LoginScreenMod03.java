@@ -31,8 +31,4 @@ public class LoginScreenMod03 {
         return this;
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a18ffde14b47ac4a94bc640580e013cafd3ae136

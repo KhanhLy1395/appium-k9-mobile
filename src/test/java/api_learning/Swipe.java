@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class Swipe {
 
-    public void swipeUpVertically(int swipeStep, int swipeTime){
+    public void swipeUpVertically(int swipeStep, int swipeTime) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
@@ -24,8 +24,8 @@ public class Swipe {
         int xStartPoint = (50 * screenHeight) / 100;
         int xEndPoint = (50 * screenHeight) / 100;
 
-        int yStartPoint = (20 * screenWidth) /100;
-        int yEndPoint = (swipeStep * screenWidth) /100;
+        int yStartPoint = (20 * screenWidth) / 100;
+        int yEndPoint = (swipeStep * screenWidth) / 100;
 
         // Convert coordinates >> point options
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
@@ -42,7 +42,8 @@ public class Swipe {
                     .perform();
         }
     }
-    public void swipeDownVertically(int swipeStep, int swipeTime){
+
+    public void swipeDownVertically(int swipeStep, int swipeTime) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
@@ -53,8 +54,8 @@ public class Swipe {
         int xStartPoint = (50 * screenHeight) / 100;
         int xEndPoint = (50 * screenHeight) / 100;
 
-        int yStartPoint = (20 * screenWidth) /100;
-        int yEndPoint = (swipeStep * screenWidth) /100;
+        int yStartPoint = (20 * screenWidth) / 100;
+        int yEndPoint = (swipeStep * screenWidth) / 100;
 
         // Convert coordinates >> point options
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
@@ -73,7 +74,7 @@ public class Swipe {
     }
 
 
-    public void swipeRightHorizontally(int swipeStep, int swipeTime){
+    public void swipeRightHorizontally(int swipeStep, int swipeTime) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
@@ -84,8 +85,8 @@ public class Swipe {
         int xStartPoint = (50 * screenHeight) / 100;
         int xEndPoint = (10 * screenHeight) / 100;
 
-        int yStartPoint = (70 * screenWidth) /100;
-        int yEndPoint = (70 * screenWidth) /100;
+        int yStartPoint = (70 * screenWidth) / 100;
+        int yEndPoint = (70 * screenWidth) / 100;
 
         // Convert coordinates >> point options
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
@@ -103,7 +104,7 @@ public class Swipe {
         }
     }
 
-    public void swipeLeftHorizontally(int swipeStep, int swipeTime){
+    public void swipeLeftHorizontally(int swipeStep, int swipeTime) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
@@ -114,8 +115,8 @@ public class Swipe {
         int xStartPoint = (50 * screenHeight) / 100;
         int xEndPoint = (90 * screenHeight) / 100;
 
-        int yStartPoint = (50 * screenWidth) /100;
-        int yEndPoint = (50 * screenWidth) /100;
+        int yStartPoint = (50 * screenWidth) / 100;
+        int yEndPoint = (50 * screenWidth) / 100;
 
         // Convert coordinates >> point options
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);

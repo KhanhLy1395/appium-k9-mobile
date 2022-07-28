@@ -11,17 +11,37 @@ public class LoginFormComponent {
     private final static By usernameSel = MobileBy.AccessibilityId("input-email");
     private final static By passwordSel = MobileBy.AccessibilityId("input-password");
     private final static By loginBtnSel = MobileBy.AccessibilityId("button-LOGIN");
+    private final static By incorrectEmailTxtSel = MobileBy.xpath("//*{contains(@text, 'Please enter a valid email address')}");
+    private final static By incorrectPasswordTxtSel = MobileBy.xpath("//*{contains(@text, 'Please enter at least 8 character')}");
 
     public LoginFormComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
 
+    public String getInvalidEmailStr() {
+        return appiumDriver.findElement(incorrectEmailTxtSel).getText();
+    }
+
+    public String getInvalidPasswordStr() {
+        return appiumDriver.findElement(incorrectPasswordTxtSel).getText();
+    }
+
+
     public void inputUsername(String usernameTxt) {
-        if (!usernameTxt.isEmpty()) appiumDriver.findElement(usernameSel).sendKeys(usernameTxt);
+        if (!usernameTxt.isEmpty()) {
+            MobileElement userNameElem = appiumDriver.findElement(usernameSel);
+            userNameElem.clear();
+            userNameElem.sendKeys(usernameTxt);
+
+        }
     }
 
     public void inputPassword(String passwordTxt) {
-        if (!passwordTxt.isEmpty()) appiumDriver.findElement(passwordSel).sendKeys(passwordTxt);
+        if (!passwordTxt.isEmpty()) {
+            MobileElement passwordElem = appiumDriver.findElement(passwordSel);
+            passwordElem.clear();
+            passwordElem.sendKeys(passwordTxt);
+        }
     }
 
     public void clickOnLoginBtn() {

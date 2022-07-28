@@ -36,7 +36,7 @@ public class LoginFormTest {
             // debug purpose only
 
             Thread.sleep(3000);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

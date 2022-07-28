@@ -70,7 +70,7 @@ public class NarrowDownSearching {
                 System.out.println("Title: " + title);
                 System.out.println("Content" + notificationsContents.get(title));
             }
-            
+
             // Click to 'Activate' button
             appiumDriver.findElement(MobileBy.AccessibilityId("button-Active")).click();
 

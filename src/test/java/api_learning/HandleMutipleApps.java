@@ -5,9 +5,7 @@ import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.internal.CapabilityHelpers;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
 
 import java.time.Duration;
@@ -43,7 +41,7 @@ public class HandleMutipleApps {
             appiumDriver.activateApp(AppPackages.SETTINGS);
 
             // Navigate to network list
-            By wifiLabelSel = MobileBy.xpath("//*[@text='Wi-Fi']");
+            By wifiLabelSel = MobileBy.xpath("//*[@text='WLAN']");
             appiumDriver.findElement(wifiLabelSel).click();
 
             // Toggle ON/OFF
@@ -51,7 +49,7 @@ public class HandleMutipleApps {
             MobileElement wifiStatusElem = appiumDriver.findElement(wifiStatusSel);
             String wifiStatusStr = wifiStatusElem.getText().trim();
             boolean isWifiOn = wifiStatusStr.equalsIgnoreCase("on");
-            if(isWifiOn) wifiStatusElem.click();
+            if (isWifiOn) wifiStatusElem.click();
 
             // Come back to the app > interact with other elements
             appiumDriver.activateApp(AppPackages.WEBDRIVER_IO);
@@ -61,7 +59,7 @@ public class HandleMutipleApps {
             Thread.sleep(2000);
 
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

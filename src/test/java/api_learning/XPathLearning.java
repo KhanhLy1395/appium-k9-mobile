@@ -5,8 +5,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -21,11 +19,11 @@ public class XPathLearning {
 
 
             // find Login form elements
-           List<MobileElement> credFeildElems = appiumDriver.findElements(MobileBy.xpath("//android.widget.EditText"));
-           final int EMAIL_INDEX = 0;
-           final int PASSWORD_INDEX = 1;
-           credFeildElems.get(EMAIL_INDEX).sendKeys("teo@sth.com");
-           credFeildElems.get(PASSWORD_INDEX).sendKeys("12345678");
+            List<MobileElement> credFeildElems = appiumDriver.findElements(MobileBy.xpath("//android.widget.EditText"));
+            final int EMAIL_INDEX = 0;
+            final int PASSWORD_INDEX = 1;
+            credFeildElems.get(EMAIL_INDEX).sendKeys("teo@sth.com");
+            credFeildElems.get(PASSWORD_INDEX).sendKeys("12345678");
 
 
             // Find login info text by UI selector
@@ -38,7 +36,7 @@ public class XPathLearning {
             // debug purpose only
 
             Thread.sleep(3000);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

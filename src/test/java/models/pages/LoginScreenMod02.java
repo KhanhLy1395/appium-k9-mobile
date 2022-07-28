@@ -27,9 +27,4 @@ public class LoginScreenMod02 {
     public void clickOnLoginBtn() {
         appiumDriver.findElement(loginBtnSel).click();
     }
-<<<<<<< HEAD
-
 }
-=======
-}
->>>>>>> a18ffde14b47ac4a94bc640580e013cafd3ae136

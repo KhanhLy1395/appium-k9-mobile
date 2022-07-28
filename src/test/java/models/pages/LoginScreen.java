@@ -13,11 +13,11 @@ public class LoginScreen {
         this.appiumDriver = appiumDriver;
     }
 
-    public LoginFormComponent loginFormComp(){
+    public LoginFormComponent loginFormComp() {
         return new LoginFormComponent(appiumDriver);
     }
 
-    public BottomNavComponent bottomNavComp(){
+    public BottomNavComponent bottomNavComp() {
         return new BottomNavComponent(appiumDriver);
     }
 }

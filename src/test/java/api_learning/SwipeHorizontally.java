@@ -27,7 +27,7 @@ public class SwipeHorizontally {
             WebDriverWait wait = new WebDriverWait(appiumDriver, 10L);
             wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"Swipe horizontal\")")));
 
-           // Get mobile window size
+            // Get mobile window size
             Dimension windowSize = appiumDriver.manage().window().getSize();
             int screenHeight = windowSize.getHeight();
             int screenWidth = windowSize.getWidth();
@@ -36,8 +36,8 @@ public class SwipeHorizontally {
             int xStartPoint = (50 * screenHeight) / 100;
             int xEndPoint = (10 * screenHeight) / 100;
 
-            int yStartPoint = (70 * screenWidth) /100;
-            int yEndPoint = (70 * screenWidth) /100;
+            int yStartPoint = (70 * screenWidth) / 100;
+            int yEndPoint = (70 * screenWidth) / 100;
 
             // Convert coordinates >> point options
             PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
@@ -55,11 +55,10 @@ public class SwipeHorizontally {
             }
 
 
-
             // debug purpose only
 
             Thread.sleep(3000);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
