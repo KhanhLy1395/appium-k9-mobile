@@ -45,10 +45,11 @@ public class HandleMutipleApps {
             appiumDriver.findElement(wifiLabelSel).click();
 
             // Toggle ON/OFF
-            By wifiStatusSel = MobileBy.id("com.android.settings:id/switch_text");
+            By wifiStatusSel = MobileBy.id("android:id/summary");
             MobileElement wifiStatusElem = appiumDriver.findElement(wifiStatusSel);
-            String wifiStatusStr = wifiStatusElem.getText().trim();
-            boolean isWifiOn = wifiStatusStr.equalsIgnoreCase("on");
+            String wifiStatusStr = wifiStatusElem.getText();
+
+            boolean isWifiOn = wifiStatusStr.equalsIgnoreCase("To see available networks, turn WLAN on");
             if (isWifiOn) wifiStatusElem.click();
 
             // Come back to the app > interact with other elements
