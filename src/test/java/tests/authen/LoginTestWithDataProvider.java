@@ -6,55 +6,28 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.Platform;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import test_flows.authentication.LoginFlow;
+import test_data.models.LoginCred;
+import tests.authen.authentication.LoginFlow;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class LoginTestWithDataProvider {
 
     @Test(dataProvider = "loginCredData")
-            public void testLogin(LoginCred loginCred){
+    public void testLogin(LoginCred loginCred) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
 
         try {
-                LoginFlow loginFlow = new LoginFlow(appiumDriver, loginCred.getUsername(), loginCred.getPassword());
-                loginFlow.gotoLoginScreen();
-                loginFlow.login();
-                loginFlow.verifyLogin();
-
+            LoginFlow loginFlow = new LoginFlow(appiumDriver, loginCred.getUsername(), loginCred.getPassword());
+            loginFlow.gotoLoginScreen();
+            loginFlow.login();
+            loginFlow.verifyLogin();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        appiumDriver.quit();
     }
-
-
-    public static class LoginCred {
-    String username;
-    String password;
-
-    public LoginCred(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String toString() {
-        return "LoginCred{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
-}
 
     @DataProvider
     public LoginCred[] loginCredData(){
@@ -64,4 +37,3 @@ public class LoginTestWithDataProvider {
         return new LoginCred[]{data1, data2, data3};
     }
 }
-

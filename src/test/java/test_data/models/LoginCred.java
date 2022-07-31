@@ -27,7 +27,7 @@ import tests.authen.LoginTestWithDataProvider;
                     ", password='" + password + '\'' +
                     '}';
         }
-    }
+
 
     @DataProvider
     public LoginCred[] loginCredData(){

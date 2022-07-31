@@ -4,7 +4,7 @@ import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.Platform;
-import test_flows.authentication.LoginFlow;
+import tests.authen.authentication.LoginFlow;
 
 import java.util.ArrayList;
 import java.util.List;
