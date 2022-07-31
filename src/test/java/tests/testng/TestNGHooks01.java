@@ -16,12 +16,12 @@ public class TestNGHooks01 {
 
     }
 
-    @Test(priority = 2, dependsOnMethods = {"testSth01"})
+    @Test(priority = 2)
     public void testSth01(){
 
     }
 
-    @Test(priority = 1, dependsOnMethods = {"testSth01"})
+    @Test(priority = 1)
     public void testSth02(){
 
     }

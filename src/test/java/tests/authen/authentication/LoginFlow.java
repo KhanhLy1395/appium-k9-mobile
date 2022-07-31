@@ -53,19 +53,27 @@ public class LoginFlow extends BaseFlow {
     // todo
     private void verifyCorrectLoginCreds() {
 
+        String actualValidLoginStr = loginFormComponent.getCorrectLoginStr();
+        String expectedValidLoginStr = "You are logged in!";
+        Assert.assertEquals(actualValidLoginStr, expectedValidLoginStr, "Login Failed");
+
+        System.out.println("actualValidLoginStr: " + actualValidLoginStr);
+        System.out.println("expectedValidLoginStr: " + expectedValidLoginStr);
     }
 
     private void verifyIncorrectEmail(LoginFormComponent loginFormComponent) {
-        String actualInvalidEmailStr = loginFormComponent.getInvalidEmailStr();
-        String expectedInvalidEmailStr = "Please enter a valid email address";
-        Assert.assertEquals(actualInvalidEmailStr, expectedInvalidEmailStr, "Ivalid Email");
-        System.out.println("actualInvalidEmailStr: " + actualInvalidEmailStr);
-        System.out.println("expectedInvalidEmailStr: " + expectedInvalidEmailStr);
+
+        String actualInvalidPasswordStr = loginFormComponent.getInvalidEmailStr();
+        String expectedInvalidPasswordStr = "Please enter a valid email address";
+        Assert.assertEquals(actualInvalidPasswordStr, expectedInvalidPasswordStr, "Email invalid");
+
+        System.out.println("actualInvalidPasswordStr: " + actualInvalidPasswordStr);
+        System.out.println("expectedInvalidPasswordStr: " + expectedInvalidPasswordStr);
     }
 
     private void verifyIncorrectPassword(LoginFormComponent loginFormComponent) {
         String actualInvalidPasswordStr = loginFormComponent.getInvalidPasswordStr();
-        String expectedInvalidPasswordStr = "Please enter at least 8 character";
+        String expectedInvalidPasswordStr = "Please enter at least 8 characters";
         Assert.assertEquals(actualInvalidPasswordStr, expectedInvalidPasswordStr, "Password invalid");
 
         System.out.println("actualInvalidPasswordStr: " + actualInvalidPasswordStr);
