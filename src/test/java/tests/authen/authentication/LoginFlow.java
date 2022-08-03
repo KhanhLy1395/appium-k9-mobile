@@ -23,7 +23,7 @@ public class LoginFlow extends BaseFlow {
     public void login() {
         LoginScreen loginScreen = new LoginScreen(appiumDriver);
         LoginFormComponent loginFormComp = loginScreen.loginFormComp();
-        if (!username.isEmpty()) {
+       if (!username.isEmpty()) {
             loginFormComp.inputUsername(username);
         }
 
@@ -50,7 +50,7 @@ public class LoginFlow extends BaseFlow {
 
     }
 
-    // todo
+
     private void verifyCorrectLoginCreds() {
 
         String actualValidLoginStr = loginFormComponent.getCorrectLoginStr();

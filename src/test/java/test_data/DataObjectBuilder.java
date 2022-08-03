@@ -1,4 +1,4 @@
-package test_data.models;
+package test_data;
 
 import com.google.gson.Gson;
 
