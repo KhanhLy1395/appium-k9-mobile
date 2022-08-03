@@ -1,4 +1,4 @@
-package tests.authen.authentication;
+package tests.authen;
 
 import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
@@ -6,8 +6,10 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.Platform;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import test_data.models.DataObjectBuilder;
 import test_data.models.LoginCred;
 import test_flows.BaseFlow;
+import tests.authen.authentication.LoginFlow;
 import tests.testng.BaseTest;
 
 public class LoginTestWithBaseTest extends BaseTest {
@@ -26,10 +28,8 @@ public class LoginTestWithBaseTest extends BaseTest {
 
     @DataProvider
     public LoginCred[] loginCredData(){
-        LoginCred data1 = new LoginCred("teo@", "12345678");
-        LoginCred data2 = new LoginCred("teo@sth.com", "1111");
-        LoginCred data3 = new LoginCred("teo@sth.com", "12345678");
-        return new LoginCred[]{data1, data2, data3};
+        String filePath = "/src/test/java/test_data/authen/LoginCreds.json";
+        return DataObjectBuilder.buildDataObject(filePath,LoginCred[].class);
     }
 
 }
