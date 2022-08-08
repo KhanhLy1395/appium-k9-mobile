@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.GregorianCalendar;
 
-public class TestParameter {
+public class TestParameter02 {
 
     @Test
     @Parameters({"systemPort", "udid"})
