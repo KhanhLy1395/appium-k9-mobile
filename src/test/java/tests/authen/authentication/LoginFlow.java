@@ -2,6 +2,7 @@ package tests.authen.authentication;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.qameta.allure.Step;
 import models.component.login.LoginFormComponent;
 import models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
@@ -34,6 +35,7 @@ public class LoginFlow extends BaseFlow {
         loginFormComp.clickOnLoginBtn();
     }
 
+    @Step("Verify login with correct creds")
     public void verifyLogin() {
         boolean isEmailValid = EmailValidator.getInstance().isValid(username);
         boolean isPasswordValid = password.length() >= 8;
@@ -50,7 +52,7 @@ public class LoginFlow extends BaseFlow {
 
     }
 
-
+    @Step("Verify login with correct creds")
     private void verifyCorrectLoginCreds() {
 
         String actualValidLoginStr = loginFormComponent.getCorrectLoginStr();
@@ -61,6 +63,7 @@ public class LoginFlow extends BaseFlow {
         System.out.println("expectedValidLoginStr: " + expectedValidLoginStr);
     }
 
+    @Step("Verify login with incorrect email")
     private void verifyIncorrectEmail(LoginFormComponent loginFormComponent) {
 
         String actualInvalidPasswordStr = loginFormComponent.getInvalidEmailStr();
@@ -71,6 +74,7 @@ public class LoginFlow extends BaseFlow {
         System.out.println("expectedInvalidPasswordStr: " + expectedInvalidPasswordStr);
     }
 
+    @Step("Verify login with incorrect password")
     private void verifyIncorrectPassword(LoginFormComponent loginFormComponent) {
         String actualInvalidPasswordStr = loginFormComponent.getInvalidPasswordStr();
         String expectedInvalidPasswordStr = "Please enter at least 8 characters";
