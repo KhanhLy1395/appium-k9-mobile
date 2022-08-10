@@ -4,8 +4,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import platform.Platform;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -19,12 +19,11 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability(PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(AUTOMATION_NAME, "uiautomator2");
-        desiredCapabilities.setCapability(UDID, "3300d3672cca62b9");
+        desiredCapabilities.setCapability(UDID, "9b776ad1");
         desiredCapabilities.setCapability(APP_PACKAGE, "com.wdiodemoapp");
         desiredCapabilities.setCapability(APP_ACTIVITY, "com.wdiodemoapp.MainActivity");
         URL appiumServer = null;
 
-        String targetServer = "http://192.168.1.232/wd/hub";
         try {
             appiumServer = new URL("http://localhost:4723/wd/hub");
         } catch (Exception e) {
@@ -59,15 +58,15 @@ public class DriverFactory implements MobileCapabilityTypeEx {
             desiredCapabilities.setCapability(APP_ACTIVITY, "com.wdiodemoapp.MainActivity");
             desiredCapabilities.setCapability(SYSTEM_PORT, systemPort);
             URL appiumServer = null;
-
+            String targetServer = "http://192.168.31.82:4444/wd/hub";
             try {
-                appiumServer = new URL("http://localhost:4723/wd/hub");
+                appiumServer = new URL(targetServer);
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
             if (appiumServer == null)
-                throw new RuntimeException("Can't construct the appium server url @http://localhost:4723/wd/hub");
+                throw new RuntimeException("Can't connect to selenium grid.");
 
             switch (platform) {
                 case ANDROID:

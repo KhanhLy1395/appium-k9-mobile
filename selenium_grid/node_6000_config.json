@@ -1,21 +1,24 @@
 {
   "capabilities": [
     {
+      "version": "9",
       "maxInstances": 1,
-      "platform": "ANDROID"
+      "platform": "ANDROID",
+      "deviceName": "Xiaomi note 3",
+      "udid": "9b776ad1"
     }
   ],
   "configuration": {
     "cleanUpCycle": 2000,
     "timeout": 30000,
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
-    "url": "http://192.168.1.232:6000/wd/hub",
-    "host": "192.168.31.1",
+    "url": "http://192.168.31.82:6000/wd/hub",
+    "host": "192.168.31.82",
     "port": 6000,
     "maxSession": 1,
     "register": true,
     "registerCycle": 5000,
-    "hubHost": "192.168.1.232",
+    "hubHost": "192.168.31.82",
     "hubPort": 4444,
     "hubProtocol": "http"
   }

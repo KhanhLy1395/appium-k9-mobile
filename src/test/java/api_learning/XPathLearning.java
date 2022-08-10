@@ -4,7 +4,7 @@ import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.Platform;
+import platform.Platform;
 
 import java.util.List;
 

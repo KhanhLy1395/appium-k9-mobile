@@ -6,7 +6,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.internal.CapabilityHelpers;
 import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.Platform;
+import platform.Platform;
 
 public class HandleVariantBehaviour implements MobileCapabilityTypeEx {
 

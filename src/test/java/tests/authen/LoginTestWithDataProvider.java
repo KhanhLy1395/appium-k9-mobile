@@ -3,9 +3,9 @@ package tests.authen;
 import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.Platform;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import platform.Platform;
 import test_data.models.LoginCred;
 import tests.authen.authentication.LoginFlow;
 

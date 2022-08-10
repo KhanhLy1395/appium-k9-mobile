@@ -6,7 +6,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
+import platform.Platform;
 
 import java.io.File;
 
