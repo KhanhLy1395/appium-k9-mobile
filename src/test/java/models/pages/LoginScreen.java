@@ -2,8 +2,8 @@ package models.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import models.component.global.BottomNavComponent;
-import models.component.login.LoginFormComponent;
+import models.components.global.BottomNavComponent;
+import models.components.login.LoginFormComponent;
 
 public class LoginScreen {
 

@@ -2,7 +2,7 @@ package models.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import models.component.global.BottomNavComponent;
+import models.components.global.BottomNavComponent;
 
 public class HomeScreen {
 

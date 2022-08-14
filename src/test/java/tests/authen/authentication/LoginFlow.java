@@ -3,7 +3,7 @@ package tests.authen.authentication;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.qameta.allure.Step;
-import models.component.login.LoginFormComponent;
+import models.components.login.LoginFormComponent;
 import models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.testng.Assert;

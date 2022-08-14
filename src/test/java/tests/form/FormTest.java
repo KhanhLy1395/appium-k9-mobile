@@ -1,5 +1,6 @@
 package tests.form;
 
+import io.qameta.allure.Issue;
 import org.testng.annotations.Test;
 import test_flows.form.FormFlow;
 import tests.testng.BaseTest;
@@ -7,6 +8,7 @@ import tests.testng.BaseTest;
 public class FormTest extends BaseTest {
 
     @Test
+    @Issue("JIRA-321")
     public void testFormInput() {
         System.out.println("--> Session ID: " + getDriver().getSessionId());
         FormFlow formFlow = new FormFlow(getDriver());

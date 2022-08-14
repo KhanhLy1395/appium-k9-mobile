@@ -1,6 +1,7 @@
 package tests.authen;
 
-import org.jetbrains.annotations.NotNull;
+import io.qameta.allure.Description;
+import io.qameta.allure.TmsLink;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import test_data.DataObjectBuilder;
@@ -8,9 +9,11 @@ import test_data.models.LoginCred;
 import tests.authen.authentication.LoginFlow;
 import tests.testng.BaseTest;
 
-public class LoginTestWithBaseTest extends BaseTest {
+public class Login extends BaseTest {
 
-    @Test(dataProvider = "loginCredData")
+    @Description("Login Test with data driven")
+    @Test(dataProvider = "loginCredData", description = "Login Test")
+    @TmsLink("TEST-123")
     public void testLogin(LoginCred loginCred) {
         LoginFlow loginFlow = new LoginFlow(getDriver(), loginCred.getUsername(), loginCred.getPassword());
         loginFlow.gotoLoginScreen();

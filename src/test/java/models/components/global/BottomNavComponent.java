@@ -1,4 +1,4 @@
-package models.component.global;
+package models.components.global;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
