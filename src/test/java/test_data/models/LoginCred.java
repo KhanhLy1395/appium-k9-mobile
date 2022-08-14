@@ -1,9 +1,6 @@
 package test_data.models;
 
-import org.testng.annotations.DataProvider;
-import tests.authen.LoginTestWithDataProvider;
-
-    public class LoginCred {
+public class LoginCred {
         String username;
         String password;
 

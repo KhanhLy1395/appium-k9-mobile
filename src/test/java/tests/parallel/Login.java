@@ -1,11 +1,10 @@
 package tests.parallel;
 
-import org.jetbrains.annotations.NotNull;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import test_data.DataObjectBuilder;
 import test_data.models.LoginCred;
-import tests.authen.authentication.LoginFlow;
+import test_flows.authen.LoginFlow;
 import tests.testng.BaseTest;
 
 public class Login extends BaseTest {

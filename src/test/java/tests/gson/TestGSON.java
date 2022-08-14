@@ -2,7 +2,6 @@ package tests.gson;
 
 import com.google.gson.Gson;
 import test_data.models.LoginCred;
-import tests.authen.LoginTestWithDataProvider;
 
 public class TestGSON {
 

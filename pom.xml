@@ -22,6 +22,10 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <systemPropertyVariables>
+                        <allure.link.tms.pattern></allure.link.tms.pattern>
+                        <allure.link.tms.pattern></allure.link.tms.pattern>
+                    </systemPropertyVariables>
                 </configuration>
                 <dependencies>
                     <dependency>

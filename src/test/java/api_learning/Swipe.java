@@ -14,7 +14,7 @@ import java.time.Duration;
 public class Swipe {
 
     public void swipeUpVertically(int swipeStep, int swipeTime) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(platform.Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(platform.Platform.android);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
         int screenHeight = windowSize.getHeight();
@@ -44,7 +44,7 @@ public class Swipe {
     }
 
     public void swipeDownVertically(int swipeStep, int swipeTime) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(platform.Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(platform.Platform.android);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
         int screenHeight = windowSize.getHeight();
@@ -75,7 +75,7 @@ public class Swipe {
 
 
     public void swipeRightHorizontally(int swipeStep, int swipeTime) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(platform.Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(platform.Platform.android);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
         int screenHeight = windowSize.getHeight();
@@ -105,7 +105,7 @@ public class Swipe {
     }
 
     public void swipeLeftHorizontally(int swipeStep, int swipeTime) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         // Get mobile window size
         Dimension windowSize = appiumDriver.manage().window().getSize();
         int screenHeight = windowSize.getHeight();

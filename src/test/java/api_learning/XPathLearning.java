@@ -11,7 +11,7 @@ import java.util.List;
 public class XPathLearning {
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try {
             // navigate to login screen
             MobileElement navLoginScreenButton = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));

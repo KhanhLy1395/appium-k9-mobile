@@ -17,7 +17,7 @@ import java.time.Duration;
 public class SwipeHorizontally {
 
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         try {
             // navigate to login screen
             MobileElement navFormsScreenButton = appiumDriver.findElement(MobileBy.AccessibilityId("Swipe"));

@@ -1,4 +1,4 @@
-package tests.authen.authentication;
+package test_flows.authen;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
