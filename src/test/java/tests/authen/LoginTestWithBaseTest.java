@@ -9,7 +9,7 @@ import test_data.models.LoginCred;
 import tests.authen.authentication.LoginFlow;
 import tests.testng.BaseTest;
 
-public class Login extends BaseTest {
+public class LoginTestWithBaseTest extends BaseTest {
 
     @Description("Login Test with data driven")
     @Test(dataProvider = "loginCredData", description = "Login Test")
