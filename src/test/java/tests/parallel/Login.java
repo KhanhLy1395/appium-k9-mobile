@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import test_data.DataObjectBuilder;
 import test_data.models.LoginCred;
 import test_flows.authen.LoginFlow;
-import tests.testng.BaseTest;
+import tests.BaseTest;
 
 public class Login extends BaseTest {
 

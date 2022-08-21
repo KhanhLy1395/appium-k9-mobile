@@ -1,4 +1,4 @@
-package tests.testng;
+package tests;
 
 import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;

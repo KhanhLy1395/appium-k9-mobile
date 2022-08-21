@@ -4,7 +4,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import models.pages.HomeScreen;
 import models.pages.LoginScreen;
-import tests.testng.BaseTest;
 
 public class BaseFlow {
 
