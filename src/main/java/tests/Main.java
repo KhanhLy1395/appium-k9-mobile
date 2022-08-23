@@ -14,43 +14,41 @@ import java.util.*;
 
 public class Main implements MobileCapabilityTypeEx {
 
-
+    @SuppressWarnings("UnstableApiUsage")
     public static void main(String[] args) throws IOException {
 
-        // Get all classes
+        // Get all test classes
         final ClassLoader loader = Thread.currentThread().getContextClassLoader();
         List<Class<?>> testClasses = new ArrayList<>();
 
-         for (ClassPath.ClassInfo info : ClassPath.from(loader).getTopLevelClasses()) {
+        for (ClassPath.ClassInfo info : ClassPath.from(loader).getTopLevelClasses()) {
             String classInfoName = info.getName();
             boolean startWithTestDot = classInfoName.startsWith("tests.");
             boolean isBaseTestClass = classInfoName.startsWith("tests.BaseTest");
             boolean isMainClass = classInfoName.startsWith("tests.Main");
 
-            if (startWithTestDot && !isMainClass && !isBaseTestClass){
+            if(startWithTestDot && !isBaseTestClass && !isMainClass){
                 testClasses.add(info.load());
             }
         }
 
         // Get platform
-        //String platFormName = System.getProperty("platform");
-        String platFormName = System.getenv("platform");
-        if (platFormName == null){
+        String platformName = System.getProperty("platform");
+        if(platformName == null){
             throw new IllegalArgumentException("[ERR] Please provide platform via -Dplatform");
         }
-
         try {
-            Platform.valueOf(platFormName);
+            Platform.valueOf(platformName);
         } catch (Exception e){
-            throw new IllegalArgumentException("[ERR] We don't support platform " + platFormName + ", supported platform: " + Arrays.toString(Platform.values()));
+            throw new IllegalArgumentException("[ERR] We don't support platform " + platformName + ", supported platforms: " + Arrays.toString(Platform.values()));
         }
 
-        //Device under test
-        List<String> iphoneDevicesList = Arrays.asList("iPhone 12", "iPhone 13");
-        List<String> androidDevicesList = Arrays.asList("emulator-5554", "9b776ad1");
-        List<String> deviceList = platFormName.equalsIgnoreCase("ios") ? iphoneDevicesList : androidDevicesList;
+        // Devices under test
+        List<String> iPhoneDeviceList = Arrays.asList("iPhone 12", "iPhone 13");
+        List<String> androidDeviceList = Arrays.asList("emulator-5554");
+        List<String> deviceList = platformName.equalsIgnoreCase("ios") ? iPhoneDeviceList : androidDeviceList;
 
-        // Assign test class into devices
+        // Assign test classes into devices
         final int testNumEachDevice = testClasses.size() / deviceList.size();
         Map<String, List<Class<?>>> desiredCaps = new HashMap<>();
 
@@ -64,31 +62,22 @@ public class Main implements MobileCapabilityTypeEx {
 
         // Build dynamic test suite
         TestNG testNG = new TestNG();
-            // Tao Suite
         XmlSuite suite = new XmlSuite();
-            // Dat ten Suite
         suite.setName("Regression");
 
         List<XmlTest> allTests = new ArrayList<>();
-        // Loop all device
         for (String deviceName : desiredCaps.keySet()) {
-            // tao 1 <test>
             XmlTest test = new XmlTest(suite);
-            // dat ten cho <test>
-            test.setName(deviceName );
-            // List xml class
+            test.setName(deviceName);
             List<XmlClass> xmlClasses = new ArrayList<>();
-
-            // List những class đã đc gán cho device đó
             List<Class<?>> dedicatedClasses = desiredCaps.get(deviceName);
             for (Class<?> dedicatedClass : dedicatedClasses) {
                 xmlClasses.add(new XmlClass(dedicatedClass.getName()));
             }
-            // add vao test
+
             test.setXmlClasses(xmlClasses);
-            // add them parameter(udid,...)
             test.addParameter(UDID, deviceName);
-            test.addParameter(PLATFORM_NAME, platFormName);
+            test.addParameter(PLATFORM_NAME, platformName);
             test.addParameter(PLATFORM_VERSION, "15.0");
             test.addParameter(SYSTEM_PORT, String.valueOf(new SecureRandom().nextInt(1000) + 8300));
             allTests.add(test);
@@ -100,16 +89,12 @@ public class Main implements MobileCapabilityTypeEx {
 
         System.out.println(suite.toXml());
 
-        // Add testsuite into suite list
-        /*List<XmlSuite> suites = new ArrayList<>();
-        suites.add(suite);*/
+        // Add Testsuite into suite list
+        List<XmlSuite> suites = new ArrayList<>();
+        suites.add(suite);
 
         // Invoke run method
-        /*testNG.setXmlSuites(suites);
-        testNG.run();*/
-
-
-
-
+        testNG.setXmlSuites(suites);
+        testNG.run();
     }
 }
