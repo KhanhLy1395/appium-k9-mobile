@@ -7,11 +7,8 @@ import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import platform.Platform;
 
 import java.io.File;
@@ -36,6 +33,8 @@ public class BaseTest {
         return driverThread.get().getDriver(Platform.valueOf(platformName), udid, systemPort, platformVersion);
     }
 
+
+
     @BeforeTest
     @Parameters({"udid", "systemPort", "platformName", "platformVersion"})
     public void initAppiumSession(String udid, String systemPort, String platformName, @Optional("platformVersion") String platformVersion){
@@ -49,6 +48,8 @@ public class BaseTest {
             return driverThread;
         });
     }
+
+
 
     @AfterTest(alwaysRun = true)
     public void quitAppiumSession(){
