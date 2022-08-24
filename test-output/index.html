@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Regression" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -114,11 +114,17 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;Regression&quot;&gt;
+  &lt;test thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;9b776ad1&quot;&gt;
+    &lt;parameter name=&quot;platformVersion&quot; value=&quot;15.0&quot;/&gt;
+    &lt;parameter name=&quot;udid&quot; value=&quot;9b776ad1&quot;/&gt;
+    &lt;parameter name=&quot;platformName&quot; value=&quot;android&quot;/&gt;
+    &lt;parameter name=&quot;systemPort&quot; value=&quot;9084&quot;/&gt;
+  &lt;/test&gt; &lt;!-- 9b776ad1 --&gt;
   &lt;test thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;emulator-5554&quot;&gt;
     &lt;parameter name=&quot;platformVersion&quot; value=&quot;15.0&quot;/&gt;
     &lt;parameter name=&quot;udid&quot; value=&quot;emulator-5554&quot;/&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;android&quot;/&gt;
-    &lt;parameter name=&quot;systemPort&quot; value=&quot;9011&quot;/&gt;
+    &lt;parameter name=&quot;systemPort&quot; value=&quot;8971&quot;/&gt;
   &lt;/test&gt; &lt;!-- emulator-5554 --&gt;
 &lt;/suite&gt; &lt;!-- Regression --&gt;
             </pre>
@@ -130,6 +136,9 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
+              <li>
+                <span class="test-name">9b776ad1 (0 classes)</span>
+              </li>
               <li>
                 <span class="test-name">emulator-5554 (0 classes)</span>
               </li>

@@ -32,8 +32,15 @@ public class Main implements MobileCapabilityTypeEx {
             }
         }
 
+        for (Class<?> testClass : testClasses) {
+            System.out.println("test class = " + testClass.toString());
+        }
+
         // Get platform
+/*
         String platformName = System.getProperty("platform");
+*/
+        String platformName = System.getenv("platform");
         if(platformName == null){
             throw new IllegalArgumentException("[ERR] Please provide platform via -Dplatform");
         }
@@ -45,7 +52,7 @@ public class Main implements MobileCapabilityTypeEx {
 
         // Devices under test
         List<String> iPhoneDeviceList = Arrays.asList("iPhone 12", "iPhone 13");
-        List<String> androidDeviceList = Arrays.asList("emulator-5554");
+        List<String> androidDeviceList = Arrays.asList("emulator-5554", "9b776ad1");
         List<String> deviceList = platformName.equalsIgnoreCase("ios") ? iPhoneDeviceList : androidDeviceList;
 
         // Assign test classes into devices
