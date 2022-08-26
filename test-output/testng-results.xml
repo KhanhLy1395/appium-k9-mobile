@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-24T23:06:20 ICT" name="Regression" finished-at="2022-08-24T23:06:20 ICT" duration-ms="21">
+  <suite started-at="2022-08-26T16:35:30 ICT" name="Regression" finished-at="2022-08-26T16:35:30 ICT" duration-ms="17">
     <groups>
     </groups>
-    <test started-at="2022-08-24T23:06:20 ICT" name="emulator-5554" finished-at="2022-08-24T23:06:20 ICT" duration-ms="21">
-    </test> <!-- emulator-5554 -->
-    <test started-at="2022-08-24T23:06:20 ICT" name="9b776ad1" finished-at="2022-08-24T23:06:20 ICT" duration-ms="21">
-    </test> <!-- 9b776ad1 -->
+    <test started-at="2022-08-26T16:35:30 ICT" name="iPhone 13" finished-at="2022-08-26T16:35:30 ICT" duration-ms="17">
+    </test> <!-- iPhone 13 -->
+    <test started-at="2022-08-26T16:35:30 ICT" name="iPhone 12" finished-at="2022-08-26T16:35:30 ICT" duration-ms="17">
+    </test> <!-- iPhone 12 -->
   </suite> <!-- Regression -->
 </testng-results>
