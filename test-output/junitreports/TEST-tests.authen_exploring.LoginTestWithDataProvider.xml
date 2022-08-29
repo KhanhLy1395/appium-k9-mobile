@@ -1,134 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="0" failed="4" skipped="1">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2022-08-29T11:34:40 ICT" name="Regression" finished-at="2022-08-29T11:34:53 ICT" duration-ms="12824">
-    <groups>
-    </groups>
-    <test started-at="2022-08-29T11:34:40 ICT" name="emulator-5554" finished-at="2022-08-29T11:34:41 ICT" duration-ms="206">
-      <class name="tests.authen.LoginTestWithBaseTest">
-        <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:40 ICT" name="initAppiumSession" finished-at="2022-08-29T11:34:41 ICT" duration-ms="26" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[emulator-5554]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[8681]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[android]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[15.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initAppiumSession -->
-        <test-method is-config="true" signature="getTestParams(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:41 ICT" name="getTestParams" finished-at="2022-08-29T11:34:41 ICT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[emulator-5554]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[8681]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[android]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[15.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestParams -->
-        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:41 ICT" name="testLogin" description="Login Test" data-provider="loginCredData" finished-at="2022-08-29T11:34:41 ICT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.RuntimeException: [ERR] Can't locate the file: D:\appium-k9-mobiletest_data/authen/LoginCreds.json]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.RuntimeException: [ERR] Can't locate the file: D:\appium-k9-mobiletest_data/authen/LoginCreds.json
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:808)
-at org.testng.TestRunner.run(TestRunner.java:603)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.RuntimeException: [ERR] Can't locate the file: D:\appium-k9-mobiletest_data/authen/LoginCreds.json
-at test_data.DataObjectBuilder.buildDataObject(DataObjectBuilder.java:21)
-at tests.authen.LoginTestWithBaseTest.loginCredData(LoginTestWithBaseTest.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-... 20 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:41 ICT" name="quitAppiumSession" finished-at="2022-08-29T11:34:41 ICT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitAppiumSession -->
-      </class> <!-- tests.authen.LoginTestWithBaseTest -->
-    </test> <!-- emulator-5554 -->
-    <test started-at="2022-08-29T11:34:40 ICT" name="9b776ad1" finished-at="2022-08-29T11:34:53 ICT" duration-ms="12824">
-      <class name="tests.authen_exploring.LoginTestWithDataProvider">
-        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@2663e964]" started-at="2022-08-29T11:34:41 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-29T11:34:45 ICT" duration-ms="4507" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[LoginCred{username='teo@', password='12345678'}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Connection refused: connect
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: driver.version: AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
+<!-- Generated by org.testng.reporters.JUnitReportReporter -->
+<testsuite hostname="LAPPG" failures="0" tests="3" name="tests.authen_exploring.LoginTestWithDataProvider" time="12.735" errors="3" timestamp="2022-08-29T11:34:53 ICT" skipped="0">
+  <testcase classname="tests.authen_exploring.LoginTestWithDataProvider" name="testLogin" time="4.507">
+    <error message="Connection refused: connect
+Build info: version: &#039;3.141.59&#039;, revision: &#039;e82be7d358&#039;, time: &#039;2018-11-14T08:17:03&#039;
+System info: host: &#039;LAPPG&#039;, ip: &#039;10.30.10.92&#039;, os.name: &#039;Windows 10&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;11.0.11&#039;
+Driver info: driver.version: AndroidDriver" type="org.openqa.selenium.WebDriverException">
+      <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: driver.version: AndroidDriver
@@ -210,28 +88,15 @@ at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumComman
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 ... 36 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@2663e964]" started-at="2022-08-29T11:34:45 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-29T11:34:49 ICT" duration-ms="4115" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[LoginCred{username='teo@sth.com', password='1111'}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Connection refused: connect
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: driver.version: AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
+    </error>
+  </testcase> <!-- testLogin -->
+  <system-out/>
+  <testcase classname="tests.authen_exploring.LoginTestWithDataProvider" name="testLogin" time="4.113">
+    <error message="Connection refused: connect
+Build info: version: &#039;3.141.59&#039;, revision: &#039;e82be7d358&#039;, time: &#039;2018-11-14T08:17:03&#039;
+System info: host: &#039;LAPPG&#039;, ip: &#039;10.30.10.92&#039;, os.name: &#039;Windows 10&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;11.0.11&#039;
+Driver info: driver.version: AndroidDriver" type="org.openqa.selenium.WebDriverException">
+      <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: driver.version: AndroidDriver
@@ -313,28 +178,15 @@ at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumComman
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 ... 36 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@2663e964]" started-at="2022-08-29T11:34:49 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-29T11:34:53 ICT" duration-ms="4113" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[LoginCred{username='teo@sth.com', password='12345678'}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Connection refused: connect
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: driver.version: AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
+    </error>
+  </testcase> <!-- testLogin -->
+  <system-out/>
+  <testcase classname="tests.authen_exploring.LoginTestWithDataProvider" name="testLogin" time="4.115">
+    <error message="Connection refused: connect
+Build info: version: &#039;3.141.59&#039;, revision: &#039;e82be7d358&#039;, time: &#039;2018-11-14T08:17:03&#039;
+System info: host: &#039;LAPPG&#039;, ip: &#039;10.30.10.92&#039;, os.name: &#039;Windows 10&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;11.0.11&#039;
+Driver info: driver.version: AndroidDriver" type="org.openqa.selenium.WebDriverException">
+      <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: driver.version: AndroidDriver
@@ -416,160 +268,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumComman
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 ... 36 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-      </class> <!-- tests.authen_exploring.LoginTestWithDataProvider -->
-      <class name="tests.form.FormTest">
-        <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:40 ICT" name="initAppiumSession" finished-at="2022-08-29T11:34:41 ICT" duration-ms="26" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9b776ad1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[8357]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[android]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[15.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initAppiumSession -->
-        <test-method is-config="true" signature="getTestParams(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="getTestParams" finished-at="2022-08-29T11:34:53 ICT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9b776ad1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[8357]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[android]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[15.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestParams -->
-        <test-method signature="testFormInput()[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="testFormInput" finished-at="2022-08-29T11:34:53 ICT" duration-ms="2" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[please provide env variable [env]!]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: please provide env variable [env]!
-at driver.DriverFactory.getDriver(DriverFactory.java:58)
-at tests.BaseTest.getDriver(BaseTest.java:34)
-at tests.form.FormTest.testFormInput(FormTest.java:13)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:808)
-at org.testng.TestRunner.run(TestRunner.java:603)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFormInput -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="captureScreenshot" description="Capture screenshot if test is failed" finished-at="2022-08-29T11:34:53 ICT" duration-ms="0" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testFormInput status=FAILURE method=FormTest.testFormInput()[pri:0, instance:tests.form.FormTest@7354b8c5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[please provide env variable [env]!]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: please provide env variable [env]!
-at driver.DriverFactory.getDriver(DriverFactory.java:58)
-at tests.BaseTest.getDriver(BaseTest.java:34)
-at tests.BaseTest.captureScreenshot(BaseTest.java:83)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:808)
-at org.testng.TestRunner.run(TestRunner.java:603)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureScreenshot -->
-        <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="quitAppiumSession" finished-at="2022-08-29T11:34:53 ICT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitAppiumSession -->
-      </class> <!-- tests.form.FormTest -->
-    </test> <!-- 9b776ad1 -->
-  </suite> <!-- Regression -->
-</testng-results>
+    </error>
+  </testcase> <!-- testLogin -->
+  <system-out/>
+</testsuite> <!-- tests.authen_exploring.LoginTestWithDataProvider -->
