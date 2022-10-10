@@ -23,6 +23,7 @@ public class Main implements MobileCapabilityTypeEx {
 
         for (ClassPath.ClassInfo info : ClassPath.from(loader).getTopLevelClasses()) {
             String classInfoName = info.getName();
+            System.out.println("class info name" + classInfoName);
             boolean startWithTestDot = classInfoName.startsWith("tests.");
             boolean isBaseTestClass = classInfoName.startsWith("tests.BaseTest");
             boolean isMainClass = classInfoName.startsWith("tests.Main");
@@ -32,15 +33,10 @@ public class Main implements MobileCapabilityTypeEx {
             }
         }
 
-        for (Class<?> testClass : testClasses) {
-            System.out.println("test class = " + testClass.toString());
-        }
 
         // Get platform
-/*
         String platformName = System.getProperty("platform");
-*/
-        String platformName = System.getenv("platform");
+       // String platformName = System.getenv("platform");
         if(platformName == null){
             throw new IllegalArgumentException("[ERR] Please provide platform via -Dplatform");
         }
