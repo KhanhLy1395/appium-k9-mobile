@@ -28,22 +28,31 @@ public class Main implements MobileCapabilityTypeEx {
             boolean isBaseTestClass = classInfoName.startsWith("tests.BaseTest");
             boolean isMainClass = classInfoName.startsWith("tests.Main");
 
-            if(startWithTestDot && !isBaseTestClass && !isMainClass){
+            if (startWithTestDot && !isBaseTestClass && !isMainClass) {
                 testClasses.add(info.load());
             }
         }
 
 
         // Get platform
+<<<<<<< HEAD
         String platformName = System.getProperty("platform");
        // String platformName = System.getenv("platform");
         if(platformName == null){
+=======
+        /*
+         * String platformName = System.getProperty("platform");
+         */
+        String platformName = System.getenv("platform");
+        if (platformName == null) {
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
             throw new IllegalArgumentException("[ERR] Please provide platform via -Dplatform");
         }
         try {
             Platform.valueOf(platformName);
-        } catch (Exception e){
-            throw new IllegalArgumentException("[ERR] We don't support platform " + platformName + ", supported platforms: " + Arrays.toString(Platform.values()));
+        } catch (Exception e) {
+            throw new IllegalArgumentException("[ERR] We don't support platform " + platformName
+                    + ", supported platforms: " + Arrays.toString(Platform.values()));
         }
 
         // Devices under test
@@ -57,7 +66,7 @@ public class Main implements MobileCapabilityTypeEx {
 
         for (int deviceIndex = 0; deviceIndex < deviceList.size(); deviceIndex++) {
             int startIndex = deviceIndex * testNumEachDevice;
-            boolean isTheLastDevice = deviceIndex == deviceList.size() -1;
+            boolean isTheLastDevice = deviceIndex == deviceList.size() - 1;
             int endIndex = isTheLastDevice ? testClasses.size() : (startIndex + testNumEachDevice);
             List<Class<?>> subTestList = testClasses.subList(startIndex, endIndex);
             desiredCaps.put(deviceList.get(deviceIndex), subTestList);
@@ -93,11 +102,11 @@ public class Main implements MobileCapabilityTypeEx {
         System.out.println(suite.toXml());
 
         // Add Testsuite into suite list
-        List<XmlSuite> suites = new ArrayList<>();
-        suites.add(suite);
+        // List<XmlSuite> suites = new ArrayList<>();
+        // suites.add(suite);
 
         // Invoke run method
-        testNG.setXmlSuites(suites);
-        testNG.run();
+        // testNG.setXmlSuites(suites);
+        // testNG.run();
     }
 }

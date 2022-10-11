@@ -8,11 +8,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import platform.Platform;
 
 import java.io.File;
@@ -56,6 +53,14 @@ public class BaseTest {
         driverThread.get().quitAppiumDriver();
     }
 
+    @BeforeClass
+    @Parameters({"udid", "systemPort", "platformName", "platformVersion"})
+    public void getTestParams(String udid, String systemPort, String platformName, @Optional("platformVersion") String platformVersion){
+        this.udid = udid;
+        this.systemPort = systemPort;
+        this.platformName = platformName;
+        this.platformVersion = platformVersion;
+    }
 
     @AfterMethod(description = "Capture screenshot if test is failed")
     public void captureScreenshot(ITestResult result){

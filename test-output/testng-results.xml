@@ -2,12 +2,21 @@
 <testng-results ignored="0" total="5" passed="0" failed="4" skipped="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2022-08-26T18:43:25 ICT" name="Regression" finished-at="2022-08-26T18:43:38 ICT" duration-ms="12819">
     <groups>
     </groups>
     <test started-at="2022-08-26T18:43:25 ICT" name="emulator-5554" finished-at="2022-08-26T18:43:26 ICT" duration-ms="193">
       <class name="tests.authen.LoginTestWithBaseTest">
         <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.authen.LoginTestWithBaseTest@68f1b17f]" started-at="2022-08-26T18:43:25 ICT" name="initAppiumSession" finished-at="2022-08-26T18:43:25 ICT" duration-ms="22" status="PASS">
+=======
+  <suite started-at="2022-08-29T11:34:40 ICT" name="Regression" finished-at="2022-08-29T11:34:53 ICT" duration-ms="12824">
+    <groups>
+    </groups>
+    <test started-at="2022-08-29T11:34:40 ICT" name="emulator-5554" finished-at="2022-08-29T11:34:41 ICT" duration-ms="206">
+      <class name="tests.authen.LoginTestWithBaseTest">
+        <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:40 ICT" name="initAppiumSession" finished-at="2022-08-29T11:34:41 ICT" duration-ms="26" status="PASS">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <params>
             <param index="0">
               <value>
@@ -16,7 +25,11 @@
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA[8738]]>
+=======
+                <![CDATA[8681]]>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
               </value>
             </param>
             <param index="2">
@@ -33,6 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppiumSession -->
+<<<<<<< HEAD
         <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen.LoginTestWithBaseTest@68f1b17f]" started-at="2022-08-26T18:43:25 ICT" name="testLogin" description="Login Test" data-provider="loginCredData" finished-at="2022-08-26T18:43:25 ICT" duration-ms="0" status="SKIP">
           <exception class="java.lang.RuntimeException">
             <message>
@@ -40,6 +54,41 @@
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException: java.lang.RuntimeException: [ERR] Can't locate the file: D:\Appium-k9\appium-k9-mobiletest_data/authen/LoginCreds.json
+=======
+        <test-method is-config="true" signature="getTestParams(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:41 ICT" name="getTestParams" finished-at="2022-08-29T11:34:41 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8681]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[15.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestParams -->
+        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:41 ICT" name="testLogin" description="Login Test" data-provider="loginCredData" finished-at="2022-08-29T11:34:41 ICT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.RuntimeException: [ERR] Can't locate the file: D:\appium-k9-mobiletest_data/authen/LoginCreds.json]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.RuntimeException: [ERR] Can't locate the file: D:\appium-k9-mobiletest_data/authen/LoginCreds.json
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
@@ -61,7 +110,11 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 at java.base/java.lang.Thread.run(Thread.java:834)
+<<<<<<< HEAD
 Caused by: java.lang.RuntimeException: [ERR] Can't locate the file: D:\Appium-k9\appium-k9-mobiletest_data/authen/LoginCreds.json
+=======
+Caused by: java.lang.RuntimeException: [ERR] Can't locate the file: D:\appium-k9-mobiletest_data/authen/LoginCreds.json
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 at test_data.DataObjectBuilder.buildDataObject(DataObjectBuilder.java:21)
 at tests.authen.LoginTestWithBaseTest.loginCredData(LoginTestWithBaseTest.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -78,15 +131,25 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedExce
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.authen.LoginTestWithBaseTest@68f1b17f]" started-at="2022-08-26T18:43:26 ICT" name="quitAppiumSession" finished-at="2022-08-26T18:43:26 ICT" duration-ms="1" status="PASS">
+=======
+        <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.authen.LoginTestWithBaseTest@1187c9e8]" started-at="2022-08-29T11:34:41 ICT" name="quitAppiumSession" finished-at="2022-08-29T11:34:41 ICT" duration-ms="1" status="PASS">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAppiumSession -->
       </class> <!-- tests.authen.LoginTestWithBaseTest -->
     </test> <!-- emulator-5554 -->
+<<<<<<< HEAD
     <test started-at="2022-08-26T18:43:25 ICT" name="9b776ad1" finished-at="2022-08-26T18:43:38 ICT" duration-ms="12819">
       <class name="tests.authen_exploring.LoginTestWithDataProvider">
         <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@560348e6]" started-at="2022-08-26T18:43:25 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-26T18:43:30 ICT" duration-ms="4524" status="FAIL">
+=======
+    <test started-at="2022-08-29T11:34:40 ICT" name="9b776ad1" finished-at="2022-08-29T11:34:53 ICT" duration-ms="12824">
+      <class name="tests.authen_exploring.LoginTestWithDataProvider">
+        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@2663e964]" started-at="2022-08-29T11:34:41 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-29T11:34:45 ICT" duration-ms="4507" status="FAIL">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <params>
             <param index="0">
               <value>
@@ -98,13 +161,21 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedExce
             <message>
               <![CDATA[Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+<<<<<<< HEAD
 System info: host: 'LAPTOP-GFBLAG0U', ip: '192.168.31.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+=======
+System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 Driver info: driver.version: AndroidDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+<<<<<<< HEAD
 System info: host: 'LAPTOP-GFBLAG0U', ip: '192.168.31.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+=======
+System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 Driver info: driver.version: AndroidDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:262)
 at java.base/java.util.Optional.orElseGet(Optional.java:369)
@@ -189,7 +260,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
+<<<<<<< HEAD
         <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@560348e6]" started-at="2022-08-26T18:43:30 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-26T18:43:34 ICT" duration-ms="4072" status="FAIL">
+=======
+        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@2663e964]" started-at="2022-08-29T11:34:45 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-29T11:34:49 ICT" duration-ms="4115" status="FAIL">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <params>
             <param index="0">
               <value>
@@ -201,13 +276,21 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
             <message>
               <![CDATA[Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+<<<<<<< HEAD
 System info: host: 'LAPTOP-GFBLAG0U', ip: '192.168.31.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+=======
+System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 Driver info: driver.version: AndroidDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+<<<<<<< HEAD
 System info: host: 'LAPTOP-GFBLAG0U', ip: '192.168.31.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+=======
+System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 Driver info: driver.version: AndroidDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:262)
 at java.base/java.util.Optional.orElseGet(Optional.java:369)
@@ -292,7 +375,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
+<<<<<<< HEAD
         <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@560348e6]" started-at="2022-08-26T18:43:34 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-26T18:43:38 ICT" duration-ms="4138" status="FAIL">
+=======
+        <test-method signature="testLogin(test_data.models.LoginCred)[pri:0, instance:tests.authen_exploring.LoginTestWithDataProvider@2663e964]" started-at="2022-08-29T11:34:49 ICT" name="testLogin" data-provider="loginCredData" finished-at="2022-08-29T11:34:53 ICT" duration-ms="4113" status="FAIL">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <params>
             <param index="0">
               <value>
@@ -304,13 +391,21 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
             <message>
               <![CDATA[Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+<<<<<<< HEAD
 System info: host: 'LAPTOP-GFBLAG0U', ip: '192.168.31.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+=======
+System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 Driver info: driver.version: AndroidDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+<<<<<<< HEAD
 System info: host: 'LAPTOP-GFBLAG0U', ip: '192.168.31.82', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+=======
+System info: host: 'LAPPG', ip: '10.30.10.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 Driver info: driver.version: AndroidDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:262)
 at java.base/java.util.Optional.orElseGet(Optional.java:369)
@@ -397,7 +492,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
         </test-method> <!-- testLogin -->
       </class> <!-- tests.authen_exploring.LoginTestWithDataProvider -->
       <class name="tests.form.FormTest">
+<<<<<<< HEAD
         <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.form.FormTest@266374ef]" started-at="2022-08-26T18:43:25 ICT" name="initAppiumSession" finished-at="2022-08-26T18:43:25 ICT" duration-ms="22" status="PASS">
+=======
+        <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:40 ICT" name="initAppiumSession" finished-at="2022-08-29T11:34:41 ICT" duration-ms="26" status="PASS">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <params>
             <param index="0">
               <value>
@@ -406,7 +505,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA[8893]]>
+=======
+                <![CDATA[8357]]>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
               </value>
             </param>
             <param index="2">
@@ -423,7 +526,37 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppiumSession -->
+<<<<<<< HEAD
         <test-method signature="testFormInput()[pri:0, instance:tests.form.FormTest@266374ef]" started-at="2022-08-26T18:43:38 ICT" name="testFormInput" finished-at="2022-08-26T18:43:38 ICT" duration-ms="3" status="FAIL">
+=======
+        <test-method is-config="true" signature="getTestParams(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="getTestParams" finished-at="2022-08-29T11:34:53 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9b776ad1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8357]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[15.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestParams -->
+        <test-method signature="testFormInput()[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="testFormInput" finished-at="2022-08-29T11:34:53 ICT" duration-ms="2" status="FAIL">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[please provide env variable [env]!]]>
@@ -431,7 +564,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: please provide env variable [env]!
 at driver.DriverFactory.getDriver(DriverFactory.java:58)
+<<<<<<< HEAD
 at tests.BaseTest.getDriver(BaseTest.java:37)
+=======
+at tests.BaseTest.getDriver(BaseTest.java:34)
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 at tests.form.FormTest.testFormInput(FormTest.java:13)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -462,11 +599,19 @@ at java.base/java.lang.Thread.run(Thread.java:834)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFormInput -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.form.FormTest@266374ef]" started-at="2022-08-26T18:43:38 ICT" name="captureScreenshot" description="Capture screenshot if test is failed" finished-at="2022-08-26T18:43:38 ICT" duration-ms="1" status="FAIL">
           <params>
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=testFormInput status=FAILURE method=FormTest.testFormInput()[pri:0, instance:tests.form.FormTest@266374ef] output={null}]]]>
+=======
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="captureScreenshot" description="Capture screenshot if test is failed" finished-at="2022-08-29T11:34:53 ICT" duration-ms="0" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFormInput status=FAILURE method=FormTest.testFormInput()[pri:0, instance:tests.form.FormTest@7354b8c5] output={null}]]]>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
               </value>
             </param>
           </params>
@@ -477,8 +622,13 @@ at java.base/java.lang.Thread.run(Thread.java:834)
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: please provide env variable [env]!
 at driver.DriverFactory.getDriver(DriverFactory.java:58)
+<<<<<<< HEAD
 at tests.BaseTest.getDriver(BaseTest.java:37)
 at tests.BaseTest.captureScreenshot(BaseTest.java:78)
+=======
+at tests.BaseTest.getDriver(BaseTest.java:34)
+at tests.BaseTest.captureScreenshot(BaseTest.java:83)
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -513,7 +663,11 @@ at java.base/java.lang.Thread.run(Thread.java:834)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureScreenshot -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.form.FormTest@266374ef]" started-at="2022-08-26T18:43:38 ICT" name="quitAppiumSession" finished-at="2022-08-26T18:43:38 ICT" duration-ms="0" status="PASS">
+=======
+        <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.form.FormTest@7354b8c5]" started-at="2022-08-29T11:34:53 ICT" name="quitAppiumSession" finished-at="2022-08-29T11:34:53 ICT" duration-ms="1" status="PASS">
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAppiumSession -->

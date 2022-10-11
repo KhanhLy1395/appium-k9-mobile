@@ -5,12 +5,20 @@
     <parameter name="platformVersion" value="15.0"/>
     <parameter name="udid" value="emulator-5554"/>
     <parameter name="platformName" value="android"/>
+<<<<<<< HEAD
     <parameter name="systemPort" value="8738"/>
+=======
+    <parameter name="systemPort" value="8681"/>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
     <classes>
       <class name="tests.authen.LoginTestWithBaseTest">
         <methods>
           <include name="initAppiumSession"/>
           <include name="captureScreenshot"/>
+<<<<<<< HEAD
+=======
+          <include name="getTestParams"/>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <include name="quitAppiumSession"/>
           <include name="testLogin"/>
         </methods>
@@ -21,7 +29,11 @@
     <parameter name="platformVersion" value="15.0"/>
     <parameter name="udid" value="9b776ad1"/>
     <parameter name="platformName" value="android"/>
+<<<<<<< HEAD
     <parameter name="systemPort" value="8893"/>
+=======
+    <parameter name="systemPort" value="8357"/>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
     <classes>
       <class name="tests.authen_exploring.LoginTestWithDataProvider">
         <methods>
@@ -33,6 +45,10 @@
           <include name="initAppiumSession"/>
           <include name="captureScreenshot"/>
           <include name="testFormInput"/>
+<<<<<<< HEAD
+=======
+          <include name="getTestParams"/>
+>>>>>>> ee6b08953495c48d06caeccc60957a28daf08102
           <include name="quitAppiumSession"/>
         </methods>
       </class> <!-- tests.form.FormTest -->
