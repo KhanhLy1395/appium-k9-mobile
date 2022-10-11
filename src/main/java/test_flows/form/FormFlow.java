@@ -8,6 +8,7 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import test_flows.BaseFlow;
 
 public class FormFlow extends BaseFlow {
@@ -53,14 +54,43 @@ public class FormFlow extends BaseFlow {
                 .release()
                 .perform();
 
-        touchAction
-                .longPress(startPoint)
-                .moveTo(endPoint)
-                .release()
-                .perform();
+//        touchAction
+//                .longPress(startPoint)
+//                .moveTo(endPoint)
+//                .release()
+//                .perform();
+
     }
 
     public void verifyFormDisplay(){
+
+        // input to textbox
+        String inputText = "Welcome deadline";
+        appiumDriver.findElement(MobileBy.AccessibilityId("")).sendKeys(inputText);
+
+        // Verify text
+        String outputText = appiumDriver.findElement(MobileBy.AccessibilityId("")).getText().trim();
+        Assert.assertEquals(inputText, outputText);
+
+        // Turn off button
+        appiumDriver.findElement(MobileBy.AccessibilityId("")).click();
+
+        //Verify switch
+        Assert.assertTrue(appiumDriver.findElement(MobileBy.AccessibilityId("")).isEnabled());
+
+        //Select 'this app is awesome'
+        appiumDriver.findElement(MobileBy.AccessibilityId(""));
+
+        // Verify option chosen
+
+
+        // Click active button
+        appiumDriver.findElement(MobileBy.AccessibilityId("")).click();
+
+        //Verify alert text
+
+        // Click ok button
+
 
     }
 }

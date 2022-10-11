@@ -10,6 +10,9 @@ public class BottomNavComponent {
     private final AppiumDriver<MobileElement> appiumDriver;
     private final static By loginIconSel = MobileBy.AccessibilityId("Login");
     private final static By formsIconSel = MobileBy.AccessibilityId("Forms");
+    private final static By dragIconSel = MobileBy.AccessibilityId("Drag");
+    private final static By swipeIconSel = MobileBy.AccessibilityId("Swipe");
+    private final static By webviewIconSel = MobileBy.AccessibilityId("Webview");
 
     public BottomNavComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
@@ -22,4 +25,18 @@ public class BottomNavComponent {
     public void clickOnFormsIcon() {
         appiumDriver.findElement(formsIconSel).click();
     }
+
+    public void clickOnWebViewIcon() {
+        appiumDriver.findElement(webviewIconSel).click();
+    }
+
+    public void clickOnSwipeIcon() {
+        appiumDriver.findElement(swipeIconSel).click();
+    }
+
+    public void clickOnDragIcon() {
+        appiumDriver.findElement(dragIconSel).click();
+    }
+
+
 }
