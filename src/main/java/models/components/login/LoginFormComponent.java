@@ -22,7 +22,6 @@ public class LoginFormComponent {
 
     public LoginFormComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
-        // Thời gian tối đa khi Findby PageFactory(10s)
         PageFactory.initElements(new AppiumFieldDecorator(appiumDriver, Duration.ofSeconds(10)), this);
     }
 

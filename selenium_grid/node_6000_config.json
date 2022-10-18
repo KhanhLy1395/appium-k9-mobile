@@ -12,13 +12,13 @@
     "cleanUpCycle": 2000,
     "timeout": 30000,
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
-    "url": "http://192.168.31.82:6000/wd/hub",
-    "host": "192.168.31.82",
+    "url": "http://10.30.10.122:6000/wd/hub",
+    "host": "10.30.10.122",
     "port": 6000,
     "maxSession": 1,
     "register": true,
     "registerCycle": 5000,
-    "hubHost": "192.168.31.82",
+    "hubHost": "10.30.10.122",
     "hubPort": 4444,
     "hubProtocol": "http"
   }
